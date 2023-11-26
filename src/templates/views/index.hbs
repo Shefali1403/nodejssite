@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+    {{>navbar}}
+    <div class="mini-cont">
+
+    {{>Tdata}}
+    </div>
+     <div class="main-cont">
+        <div class="heading">
+            <p>All people</p>
+            <div class="buts">
+                <button class="butfirst">Export</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="table">
+           <div class="rows">
+            <p><b>Employee id</b></p>
+            <p><b>Name</b></p>
+            <p><b>Email</b></p>
+            <p><b>DOJ</b></p>
+            <p><b>job</b></p>
+            <p><b>Contact</b></p>
+           </div>
+        </div>
+        <div class="json-data">
+            <ul id="listid">
+                {{#each apiData }}
+      <li>{{id}}</li>
+       <li>{{name}}</li>
+        <li>{{email}}</li>
+         <li>{{DOJ}}</li>
+
+          <li>{{job}}</li>
+
+           <li>{{Contact}}</li>
+
+    {{/each}}
+
+            </ul>
+        </div>
+        
+    </div>
+    
+
+    </div>
+</body>
+</html>
